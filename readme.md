@@ -1,3 +1,23 @@
+about this project
+==================
+
+the community calendar is intended to be a widget that communities can include in their websites to share their events among related communities.
+
+the back-end is currently provided by techgrind.asia.
+
+this project is initiated by the Beijing GNU/Linux Usergroup for the Beijing Tech Community.
+
+you are welcome to use it for your own region, rewrite it for different frameworks or adapt it to a different back-end.
+
+the code is written in coffeescript and needs node.js only for coffeescript translation.  
+deployment can be done as static javascript files, and does not need any kind of dynamic server for the front-end.
+
+the back-end is a RESTful API written for the sTeam server as used by techgrind.asia
+
+
+development instructions
+========================
+
 step 1: install node
 
     http://nodejs.org/download/
