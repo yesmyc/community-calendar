@@ -1,7 +1,7 @@
 # File: services.coffee
 #   defines angular.js services
 
-services = angular.module 'myapp.services', []
+services = angular.module 'communitycal.services', []
 services.value 'version', '0.1'
 
 # Service: steam
@@ -66,6 +66,7 @@ services.factory 'steam', ($http, localStorageService) ->
 	loginp = ->
 		logindata = JSON.parse(localStorageService.get('logindata'))
 		user = JSON.parse(localStorageService.get('user'))
+		console.log("logindebug", logindata, user)
 		logindata and user and user.id and user.id != "guest"
 
 	# headers which are needed to be added to every request
