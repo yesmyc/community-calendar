@@ -27,6 +27,8 @@ step 1: install node
 step 2: clone the repo
 
     git clone https://gitcafe.com/BLUG/community-calendar.git
+    git clone https://gitlab.com/beijinglug/community-calendar.git
+    git clone https://github.com/beijinglug/community-calendar.git
 
 
 step 3: install node packages:
