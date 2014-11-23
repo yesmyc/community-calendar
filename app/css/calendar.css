@@ -1,4 +1,19 @@
-.community-calendar li { list-style-type: none; }
-.cc-event { border: 1px solid black; }
-.cc-event-title { font-weight: bold; }
-.cc-event-date {}
+.community-calendar li { display:table;
+                         list-style-type: none;
+                         width:210px; }
+.cc-event { border: 1px solid grey; }
+.cc-event-date { display:table-cell;
+                 float:left;
+                 width:50px;}
+.cc-event-day { font-size: 200%;
+                 width:50px;}
+.cc-event-month { width:50px;}
+.cc-event-year { display: none; }
+.cc-event-time { display: none; }
+.cc-event-title { 
+                  font-weight: bold;
+                  margin:0 auto;
+                  width:200px; }
+.cc-event-location { 
+                     width:200px;}
+.cc-event-debug { font-size:5px;}
