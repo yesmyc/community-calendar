@@ -30,11 +30,11 @@ app.directive "communityCalendar", (steam) ->
 
 		scope.day = (unix) ->
 			date = new Date(unix*1000)
-			date.getDay()
+			date.getDate()
 
 		scope.month = (unix) ->
 			date = new Date(unix*1000)
-			date.getMonth()
+			date.toLocaleString 'en-us', { month: "short" }
 
 		scope.year = (unix) ->
 			date = new Date(unix*1000)
