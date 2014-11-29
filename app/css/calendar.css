@@ -1,9 +1,8 @@
 .tab-pane { height:150px;
             overflow-y:scroll; }
 .community-calendar li { display:table;
-                         list-style-type: none;
-                         width:210px; }
-.cc-event { border: 1px solid grey; }
+                         list-style-type: none; }
+.cc-event { width:210px; border: 1px solid grey; }
 .cc-event-date { display:table-cell;
                  float:left;
                  width:50px;}
@@ -72,7 +71,7 @@
 
 .tabs-left > .nav-tabs > li > a,
 .tabs-right > .nav-tabs > li > a {
-  min-width: 74px;
+  min-width: 20px;
   margin-right: 0;
   margin-bottom: 3px;
 }
