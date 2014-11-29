@@ -1,24 +1,41 @@
-app = angular.module 'communitycal', ['LocalStorageModule','communitycal.services']
+app = angular.module 'communitycal', [
+					'LocalStorageModule',
+					'ui.bootstrap',
+					'communitycal.services']
 
 app.directive "communityCalendar", (steam) ->
 	restrict: "E"
 	template: """
-						<ul>
-							<li class="cc-event" ng-repeat="event in events">
-								<a href="#/communitycal/{{event.id}}">
-									<div class="cc-event-date">
-										<div class="cc-event-day">{{ day(event.date) }}</div>
-										<div class="cc-event-month">{{ month(event.date) }}</div>
-										<div class="cc-event-year">{{ year(event.date) }}</div>
-										<div class="cc-event-time">{{ time(event.date) }}</div>
-									</div>
-									<div class="cc-event-title">{{ event.title }}</div>
-									<div class="cc-event-location">{{ event.address }}</div>
-								</a>
-							</li>
-						</ul>
+						<div class="community-calendar tabbable tabs-below">
+							<div class="tab-content">
+							<div ng-show="active == 'list'" class="tab-pane active">
+								<ul>
+									<li class="cc-event" ng-repeat="event in events">
+										<a href="#/communitycal/{{event.id}}">
+											<div class="cc-event-date">
+												<div class="cc-event-day">{{ day(event.date) }}</div>
+												<div class="cc-event-month">{{ month(event.date) }}</div>
+												<div class="cc-event-year">{{ year(event.date) }}</div>
+												<div class="cc-event-time">{{ time(event.date) }}</div>
+											</div>
+											<div class="cc-event-title">{{ event.title }}</div>
+											<div class="cc-event-location">{{ event.address }}</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div ng-show="active == 'cal'" class="tab-pane active">calendar view</div>
+							<div ng-show="active == 'add'" class="tab-pane active">add events</div>
+							</div>
+							<ul class="nav nav-tabs">
+								<li><a data-toggle="tab" ng-click="active = 'list'">list</a></li>
+								<li><a data-toggle="tab" ng-click="active = 'cal'">cal</a></li>
+								<li><a data-toggle="tab" ng-click="active = 'add'">add</a></li>
+							</ul>
+						</div>
 						"""
 	link: (scope, element, attrs) ->
+		scope.active = "list"
 		console.log("(cal-widget:link)")
 		steam.get("techgrind.events/order-by-date").then (data) ->
 			scope.events = data['event-list']
@@ -34,7 +51,7 @@ app.directive "communityCalendar", (steam) ->
 
 		scope.month = (unix) ->
 			date = new Date(unix*1000)
-			date.toLocaleString 'en-us', { month: "short" }
+			["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][date.getMonth()]
 
 		scope.year = (unix) ->
 			date = new Date(unix*1000)
@@ -43,3 +60,8 @@ app.directive "communityCalendar", (steam) ->
 		scope.time = (unix) ->
 			date = new Date(unix*1000)
 			date.getTime()
+
+		scope.tabs = [
+			{ title:'Dynamic Title 1', content:'Dynamic content 1' },
+			{ title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
+			]
