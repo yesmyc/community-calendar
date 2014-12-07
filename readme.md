@@ -18,17 +18,18 @@ the back-end is a RESTful API written for the sTeam server as used by techgrind.
 development instructions
 ========================
 
-step 1: install node
+step 1: install node.js
 
     http://nodejs.org/download/
 
 
-
 step 2: clone the repo
 
-    git clone https://gitcafe.com/BLUG/community-calendar.git
+either from your own fork at gitlab (see contribution instruction):
+    git clone https://gitlab.com/<your name>/community-calendar.git
+
+or directly:
     git clone https://gitlab.com/beijinglug/community-calendar.git
-    git clone https://github.com/beijinglug/community-calendar.git
 
 
 step 3: install node packages:
@@ -55,3 +56,34 @@ so we can just say
 if the server is working you'll see:
 
     Listening on port 8000
+
+
+how to contribute your changes
+==============================
+
+sign up at gitlab.com
+
+fork the project
+
+clone the forked project to your computer
+    git clone https://gitlab.com/<your name>/community-calendar.git
+
+follow the instructions above to set up your environment
+
+when you are properly set up you should be able to load http://localhost:8000/ in your browser and see something similar to http://ngtg.techgrind.asia:7999/
+
+to get an idea how this widget will be used, take a look at http://beijinglug.org/index.php?option=com_content&view=section&layout=blog&id=2&Itemid=9
+
+you can see the widget in the lower right corner (it is hidden there because it is not yet functional)
+
+push changes to your repo frequently.
+
+when ready please file a merge request or notify the project developers about your contribution
+
+
+official repo
+=============
+
+the official repo is https://gitlab.com/beijinglug/community-calendar
+copies of the project exist at https://gitcafe.com/beijinglug/community-calendar
+and https://github.com/beijinglug/community-calendar
