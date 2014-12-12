@@ -1,6 +1,9 @@
 *{
 	font-family:Helvetica;
 }
+.tab-pane ul {
+	padding:0;
+}
 .tab-pane ul li{
 	left:0;
 	width:auto;
@@ -24,6 +27,7 @@
 	border-radius: 2px;
 }
 .tab-pane ul li .cc-event-date {
+	padding-left:10px;
 	color:#595856;
 	margin:5px;
 }
@@ -33,9 +37,10 @@
 .tab-pane ul li .cc-event-date {
 	color:#595856;
 	margin:5px;
+	margin-right:20px;
 }
 .tab-pane ul li .cc-event-title {
-	margin-top:15px;
+	margin-top:18px;
 }
 .tab-pane ul li .cc-event-location{
 	margin-top:1px;
