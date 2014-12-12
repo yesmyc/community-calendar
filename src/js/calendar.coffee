@@ -25,7 +25,43 @@ app.directive "communityCalendar", (steam) ->
 								</ul>
 							</div>
 							<div ng-show="active == 'cal'" class="tab-pane active">calendar view</div>
-							<div ng-show="active == 'add'" class="tab-pane active">add events</div>
+							<div ng-show="active == 'add'" class="tab-pane active"><font color="blue" face="arial bold" size="3"><center><u><b>ADD EVENTS HERE</b></u></center></font>
+							<font color="black" face="arial" size="2">
+			<br><u>Title</u> <input type="text" name="title" required="required">
+			<br>
+			
+			<hr>
+			<u>Location</u>
+			
+			<br><br>
+			City <input type="text" name="City" required="required">
+			
+			<br>
+			<br>
+			Country <input type="text" name="Country" required="required">	
+			
+			<br>
+			<hr>
+			<u>Date & Time</u>
+			<br>
+			
+			
+			<br>
+			Date <input type="text" name="date" required="required">
+			<br><br>
+			
+				
+			Time <input type="text" name="time" required="required">
+			<br>
+			<br>
+			
+			<hr>
+			<br>
+			<u>URL</u> <input type="text" name="URL" required="required">	
+			<br>
+			<br>
+			<button class="btn" ><b>Add Event</b></button>
+	</font></div>
 							</div>
 							<ul class="nav nav-tabs">
 								<li><a data-toggle="tab" ng-click="active = 'list'">list</a></li>
