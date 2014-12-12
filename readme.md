@@ -58,6 +58,15 @@ if the server is working you'll see:
     Listening on port 8000
 
 
+don't use bootstrap
+===================
+
+when we tried to use twitter-bootstrap to style the tabs we discovered that
+bootstrap forces its style on the whole webpage. since this widget is designed
+to be embedded in other websites, we do not want to break the original style of
+the website, hence we may not use bootstrap for our styling.
+
+
 how to contribute your changes
 ==============================
 
