@@ -2,6 +2,8 @@
 	font-family:Helvetica;
 }
 .tab-pane ul li{
+	left:0;
+	width:auto;
 	background: -webkit-linear-gradient(#fff, #f6f6f6);
 }
 .tab-pane ul li:hover{
@@ -25,8 +27,15 @@
 	color:#595856;
 	margin:5px;
 }
+.tab-pane ul li .cc-event-date .cc-event-day {
+	margin-top:7px;
+}
+.tab-pane ul li .cc-event-date {
+	color:#595856;
+	margin:5px;
+}
 .tab-pane ul li .cc-event-title {
-	margin-top:4px;
+	margin-top:15px;
 }
 .tab-pane ul li .cc-event-location{
 	margin-top:1px;
