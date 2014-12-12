@@ -1,0 +1,34 @@
+*{
+	font-family:Helvetica;
+}
+.tab-pane ul li{
+	background: -webkit-linear-gradient(#fff, #f6f6f6);
+}
+.tab-pane ul li:hover{
+	text-decoration: none;
+
+	background: -webkit-linear-gradient(#e6e6e6, #adadad);
+	cursor:hand;
+	color:#fff;
+	.tab-pane ul li a:hover
+}
+.tab-pane ul li a{
+	color:#000;
+	text-decoration: none;
+	border-radius: 2px;
+}
+.tab-pane ul li a:hover{
+	text-decoration: none;
+	border-radius: 2px;
+}
+.tab-pane ul li .cc-event-date {
+	color:#595856;
+	margin:5px;
+}
+.tab-pane ul li .cc-event-title {
+	margin-top:4px;
+}
+.tab-pane ul li .cc-event-location{
+	margin-top:1px;
+	font-size:12px;
+}
