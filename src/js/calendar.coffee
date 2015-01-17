@@ -1,6 +1,5 @@
 app = angular.module 'communitycal', [
 					'LocalStorageModule',
-					'ui.bootstrap',
 					'communitycal.services']
 
 app.directive "communityCalendar", (steam) ->
