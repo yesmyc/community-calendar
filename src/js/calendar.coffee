@@ -35,10 +35,10 @@ app.directive "communityCalendar", (steam) ->
 			<br><button class="btn" ><b>Submit</b></button>
 	</font></div>
 							</div>
-							<ul class="tabrow">
-								<li><a data-toggle="tab" ng-click="active = 'list'">list</a></li>
-								<li><a data-toggle="tab" ng-click="active = 'cal'">cal</a></li>
-								<li><a data-toggle="tab" ng-click="active = 'add'">add</a></li>
+							<ul class="tabrow" ng-init="selectedTab = 'list'">
+								<li ng-click="selectedTab = 'list'" ng-class="{'active':selectedTab == 'list'}"><a data-toggle="tab" ng-click="active = 'list'">list</a></li>
+								<li ng-click="selectedTab = 'cal'" ng-class="{'active':selectedTab == 'cal'}"><a data-toggle="tab" ng-click="active = 'cal'">cal</a></li>
+								<li ng-click="selectedTab = 'add'" ng-class="{'active':selectedTab == 'add'}"><a data-toggle="tab" ng-click="active = 'add'">add</a></li>
 							</ul>
 						</div>
 						"""
@@ -73,4 +73,3 @@ app.directive "communityCalendar", (steam) ->
 			{ title:'Dynamic Title 1', content:'Dynamic content 1' },
 			{ title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
 			]
-$'li'.click
