@@ -35,7 +35,7 @@ app.directive "communityCalendar", (steam) ->
 			<br><button class="btn" ><b>Submit</b></button>
 	</font></div>
 							</div>
-							<ul class="nav nav-tabs">
+							<ul class="tabrow">
 								<li><a data-toggle="tab" ng-click="active = 'list'">list</a></li>
 								<li><a data-toggle="tab" ng-click="active = 'cal'">cal</a></li>
 								<li><a data-toggle="tab" ng-click="active = 'add'">add</a></li>
@@ -73,3 +73,4 @@ app.directive "communityCalendar", (steam) ->
 			{ title:'Dynamic Title 1', content:'Dynamic content 1' },
 			{ title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
 			]
+$'li'.click
