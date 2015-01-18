@@ -96,3 +96,22 @@ official repo
 the official repo is https://gitlab.com/beijinglug/community-calendar
 copies of the project exist at https://gitcafe.com/beijinglug/community-calendar
 and https://github.com/beijinglug/community-calendar
+
+
+testing
+=======
+
+[FrisbyJS](http://frisbyjs.com/) is used to test the API. It is run through [Jasmine](http://jasmine.github.io/) and is based on [nodejs](http://nodejs.org/).
+
+Once you have nodejs installed, run the following statement to install Frisby and Jasmine:
+
+```
+npm install -g jasmine-node frisby
+```
+
+Then execute the test by:
+
+```
+cd project/directory
+jasmine-node tests/
+```
